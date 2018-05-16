@@ -3,7 +3,7 @@ function [] = anGrp_nodra()
 
 %%% CONFIGURATION SETTINGS %%%
 % (these may later be moved out to a separate config file)
-addpath('/import/monstrum2/Users/finkelm/ITC/dan/wtw/subFx_analysis/')
+addpath('/data/jux/BBL/projects/finkelGrmpyWtw/finkelGrmpyWtwScripts/wtwScripts/subFx_analysis/')
 
 % settings part I: which study to analyze;
 exptName = 'qtask_nodra';
@@ -418,6 +418,9 @@ for i = 1:numel(scFields)
         plotGroupSC(thisField,resultsSC.(thisField),truncPt);
     end
 end
+
+%combine individual variables' text files
+!Rscript /data/jux/BBL/projects/finkelGrmpyWtw/finkelGrmpyWtwScripts/wtwScripts/txtOutputProcesser.R
 
 end % main function
 

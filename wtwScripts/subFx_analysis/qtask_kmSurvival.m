@@ -62,10 +62,12 @@ isWin = isWin(trialsUsed);
 % modification #1: set first x-coord to 0
 % (first fx value is always 1; this ensures the curve starts at 0,1)
 kmX(1) = 0;
+kmF(1) = 1;
 % modification #2: extend the fx
 % it now ends at the latest quit time
 % extend (with the same value) to the latest reward time (i.e., the
 % latest time when a point is censored) if later.
+
 latestWin = max(latency(isWin));
 if kmX(end)<latestWin
     kmX(end+1,1) = latestWin;

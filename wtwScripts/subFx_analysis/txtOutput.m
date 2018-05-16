@@ -77,15 +77,15 @@ for fIdx = 1:nFields
     end % loop over blocks
 end % loop over fields
 
-dates0=cell2mat(alldates.fndm2); 
-dates1=cell2mat(alldates.nodra); 
-dates2=cell2mat(alldates.grmpy);
+%dates0=cell2mat(alldates.fndm2); 
+%dates1=cell2mat(alldates.nodra); 
+datesmat2=cell2mat(alldates.grmpy);
 %datesmat=[dates0; dates2];
-datesmat=[dates0; dates2; dates1];
+%datesmat=[dates0; dates2; dates1];
 
-datesmat2=str2num(datestr(datesmat,'yyyymmdd'));
+datesmat2=str2num(datestr(datesmat2,'yyyymmdd'));
 
-diary('/import/monstrum2/Users/finkelm/ITC/dan/wtw/txt_output/qtask_nodra/datesmat.txt');disp(datesmat2);diary off;
+diary('/data/jux/BBL/projects/finkelGrmpyWtw/finkelGrmpyWtwScripts/wtwScripts/datesmat.txt');disp(datesmat2);diary off;
 
 
 

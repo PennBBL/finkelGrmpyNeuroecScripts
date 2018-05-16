@@ -1,14 +1,14 @@
 function [grpData] = loadData_nodra()
 % load data for all subjects in the qtask_trc study
 
-% !ls -d /import/monstrum/*/subjects/*_*/behavioral/neuroec/qtask* > wtwFilenames.txt
-% 275 .mat files for subjects from fndm2, grmpy, nodra, 1 from "reward
-% combined"
+% specify file locations
+!ls /data/jux/BBL/studies/grmpy/rawNeuroec/*/*/*qtask.mat > wtwFilenames.txt
+% 145 grmpy files
 
 % dataDir = '../qtask_trc/expt/data';
 
 %load test file with 2 subjects
-FileNames = importdata('wtwFilenamesUse.txt');
+FileNames = importdata('wtwFilenames.txt');
 %FileNames = importdata('wtwFilenamesTest.txt'); %for debug
 
 % identify the datafiles to be loaded
